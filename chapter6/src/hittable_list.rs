@@ -1,3 +1,4 @@
+#![allow(unused)]
 use crate::ray::{Ray};
 use crate::hittable::{HitRecord, Hittable};
 

@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 use crate::vec3::{Point, Vec3};
 
 pub struct Ray{
