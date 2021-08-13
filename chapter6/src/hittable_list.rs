@@ -28,7 +28,7 @@ impl Hittable for HittableList {
         let mut hit_found: Option<HitRecord> = None;
         let mut closest_so_far = t_max;
         for o in self.objects.iter() {
-            match o.hit(r, t_min, closest_so_far).map_or((hit_found, t_max), |h| {let t = h.t; (Some(h), t)}) {
+            match o.hit(r, t_min, closest_so_far).map_or((hit_found, closest_so_far), |h| {let t = h.t; (Some(h), t)}) {
                 (hit, new_t) => {
                     hit_found = hit;
                     closest_so_far = new_t;
