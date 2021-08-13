@@ -42,15 +42,6 @@ impl Vec3 {
         if s.dot(normal) > 0.0 {s} else {-s}
     }
 
-    pub fn random_in_unit_disk() -> Self {
-        loop {
-            let p = Vec3(get_rand_range(-1.0..1.0), get_rand_range(-1.0..1.0), 0.0);
-            if p.length_squared() < 1.0 {
-                return p
-            };
-        }
-    }
-
     pub fn length(&self) -> f64 {
         self.length_squared().sqrt()
     }
